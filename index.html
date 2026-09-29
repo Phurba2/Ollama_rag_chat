@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Ollama RAG Chat</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">✦</div>
+
+        <div>
+          <h1>Ollama RAG Chat</h1>
+          <p>Ask questions about your local documents</p>
+        </div>
+      </div>
+
+      <div class="connection-status">
+        <span class="status-dot"></span>
+        Local
+      </div>
+    </header>
+
+    <section
+      id="chat"
+      class="chat"
+      aria-live="polite"
+    >
+      <div id="welcome" class="welcome">
+        <div class="welcome-icon">⌁</div>
+
+        <h2>Ask your documents</h2>
+
+        <p>
+          Search your indexed Markdown files using
+          <strong>llama3.2:3b</strong>.
+        </p>
+      </div>
+    </section>
+
+    <form id="chat-form" class="composer">
+      <textarea
+        id="question"
+        rows="1"
+        required
+        placeholder="Ask a question..."
+        aria-label="Ask a question"
+      ></textarea>
+
+      <button
+        id="send-button"
+        type="submit"
+      >
+        <span>Send</span>
+        <span class="send-icon">↑</span>
+      </button>
+    </form>
+
+    <p class="privacy-note">
+      Questions and documents remain on this machine.
+    </p>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
